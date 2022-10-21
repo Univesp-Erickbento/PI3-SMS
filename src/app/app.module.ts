@@ -7,6 +7,7 @@ import { HomeComponent } from './componentes/pages/home/home.component';
 import { LoginComponent } from './componentes/pages/login/login.component';
 import { UsuarioComponent } from './componentes/cadastros/usuario/usuario.component';
 import { SensoresComponent } from './componentes/cadastros/sensores/sensores.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { SensoresComponent } from './componentes/cadastros/sensores/sensores.com
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
