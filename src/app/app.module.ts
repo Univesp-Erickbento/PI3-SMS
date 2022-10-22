@@ -5,22 +5,22 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './componentes/pages/home/home.component';
 import { LoginComponent } from './componentes/pages/login/login.component';
-import { UsuarioComponent } from './componentes/cadastros/usuario/usuario.component';
 import { SensoresComponent } from './componentes/cadastros/sensores/sensores.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CadastrosModule } from './componentes/modulo-cadastro';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     LoginComponent,
-    UsuarioComponent,
     SensoresComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    CadastrosModule
   ],
   providers: [],
   bootstrap: [AppComponent]
