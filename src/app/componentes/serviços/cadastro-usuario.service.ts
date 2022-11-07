@@ -6,23 +6,14 @@ import { Usuario } from '../cadastros/usuario/usuarioClass';
 })
 export class CadastroUsuarioService {
  
-   NOVOUSUARIO!:Usuario
-    USUARIO=[]
-    
-   UsuarioNovo=[
-    "idUsuario", "nome", "registro",  "setor", "cargo"]
+  NOVOUSUARIO!:Usuario
 
   constructor( ) { }
 
-    cadastrarUsuario(NOVOUSUARIOS:{
-      let USUARIOS={}=this.USUARIO.push(this.NOVOUSUARIO)
+    cadastrarUsuario(novoUsuario : Usuario) : any {
 
-     
-       
-
-     return this.NOVOUSUARIO.push()
-    
-  
-    
-  }
+      localStorage.setItem(novoUsuario.idUsuario,novoUsuario.toString())
+      return novoUsuario
+      
+    }
 }

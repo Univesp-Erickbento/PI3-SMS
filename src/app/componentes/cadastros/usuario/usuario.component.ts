@@ -8,30 +8,25 @@ import { FormControl,Form,FormsModule,FormGroup, Validators } from '@angular/for
   styleUrls: ['./usuario.component.scss']
 })
 export class UsuarioComponent implements OnInit {
-  NOVOUSUARIOS =[
-    Usuario
-  ]
-  USUARIOS=[]
- 
 
+  Usuarios!: Usuario
+ 
   constructor(private cadastrarUsuarioService: CadastroUsuarioService) { }
 
   ngOnInit(): void {
   }
 
   adicionarusuario(idUsuario: string, nome: string,registro: string, setor: string,cargo: string) {
-    let uid, unome, uregistro,usetor,ucargo:string;
 
-      uid = idUsuario,
-      unome=nome,
-      uregistro=registro
-      usetor= setor
-      ucargo =cargo
+      let ObjectCadastro: Usuario = {
+        idUsuario : idUsuario,
+        nome : nome,
+        registro : registro,
+        setor : setor,
+        cargo : cargo
+      }
 
-      this.NOVOUSUARIOS.push()
+      this.Usuarios = this.cadastrarUsuarioService.cadastrarUsuario(ObjectCadastro)
+  }
 
-      this.USUARIOS=this.cadastrarUsuarioService.cadastrarUsuario( idUsuario,nome,registro, setor,cargo)
-
-
-}
 }
