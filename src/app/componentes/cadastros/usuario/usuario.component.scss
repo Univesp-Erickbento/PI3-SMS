@@ -1,0 +1,87 @@
+.id {
+    background-color: #fff;
+    border-radius: 3px;
+    width: 175px;
+}
+
+.id:hover {
+    background-color: rgb(235, 235, 235);
+    transition: 1s all;
+}
+
+.nome {
+    border-radius: 3px;
+    width: 175px;
+}
+
+.nome:hover {
+    background-color: rgb(235, 235, 235);
+    transition: 1s all;
+}
+
+.registro {
+    border-radius: 3px;
+    width: 177px;
+}
+
+.registro:hover {
+    background-color: rgb(235, 235, 235);
+    transition: 1s all;
+}
+
+.se {
+    border-radius: 3px;
+    width: 170x;
+}
+
+.se:hover {
+    background-color: rgb(89, 255, 74);
+    transition: 1s all;
+}
+
+.cargo {
+    border-radius: 3px;
+}
+
+.cargo:hover {
+    background-color: rgb(89, 255, 74);
+    transition: 1s all
+}
+
+.inp {
+    background-color: greenyellow;
+    border-radius: 5px;
+    padding: 10px;
+    width: 100px;
+}
+
+.inp:hover {
+    background-color: rgb(79, 255, 79);
+    transition: 1s all;
+    cursor: pointer;
+}
+
+.inp:active {
+    background-color: rgb(134, 223, 0);
+}
+
+.del {
+    background-color: red;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.del:hover {
+    background-color: rgb(180, 16, 16);
+    transition: 1s all;
+}
+
+.del:active {
+    background-color: rgb(119, 0, 0);
+    transition: 1s all;
+}
+
+.formul {
+    margin-left: 50px;
+    padding: 15px;
+}
