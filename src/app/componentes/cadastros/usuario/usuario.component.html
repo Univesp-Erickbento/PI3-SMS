@@ -1,5 +1,5 @@
 <div class="formul">
-<form #user="ngForm">
+<form > 
     id: <input #uid type="text" class="id" ngModel="USUNOVO.id"><br><br>
     Nome: <input #unome type="text" class="nome" ngModel="USUNOVO.nome"><br><br>
     Registro: <input #uregistro type="text" class="registro" ngModel="USUNOVO.registro"><br><br>
@@ -32,7 +32,7 @@
                     <td>{{usuarios.registro}}</td>
                     <td> {{usuarios.setor}}</td>
                     <td>{{usuarios.cargo}}</td>
-                    <td><button class="del" (click)="remover(usuarios.idUsuario)">Deletar</button></td>
+                    <td><button class="del" (click)="(usuarios.idUsuario)">Deletar</button></td>
                 </tr>
               </tbody>
           </table>
