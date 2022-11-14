@@ -1,1 +1,40 @@
-<p>usuario works!</p>
+<div class="formul">
+<form > 
+    id: <input #uid type="text" class="id" ngModel="USUNOVO.id"><br><br>
+    Nome: <input #unome type="text" class="nome" ngModel="USUNOVO.nome"><br><br>
+    Registro: <input #uregistro type="text" class="registro" ngModel="USUNOVO.registro"><br><br>
+    Setor    : <input  #usetor type="text" class="setor" ngModel="USUNOVO.setor"><br><br>
+    Cargo: <input #ucargo type="text" class="cargo" ngModel="USUNOVO.cargo" ><br><br>
+</form>
+ <input class="inp" type="button"  value="NOVO"  (click)= " adicionarusuario (uid.value,unome.value,uregistro.value,usetor.value,ucargo.value)"/>
+ </div>
+    <p>---------------------------------------------------------------------------------------------------------------------------------------</p>
+    <div>{{  Usuarios.length }}</div>
+
+    <p>***************************************************************************************************************************************</p>
+
+    <div>
+     <table class="table table-striped table-hover" >   
+              <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Registro</th>
+                    <th>Setor</th>
+                    <th>Cargo</th>
+                    <th>Deletar</th>
+                  </tr>
+              </thead>
+              <tbody>  
+                <tr *ngFor="let usuarios of Usuarios">
+                    <td>{{usuarios.idUsuario}}</td>
+                    <td>{{usuarios.nome}}</td>
+                    <td>{{usuarios.registro}}</td>
+                    <td> {{usuarios.setor}}</td>
+                    <td>{{usuarios.cargo}}</td>
+                    <td><button class="del" (click)="(usuarios.idUsuario)">Deletar</button></td>
+                </tr>
+              </tbody>
+          </table>
+      </div>
+
