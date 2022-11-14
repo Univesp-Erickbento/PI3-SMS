@@ -1,12 +1,16 @@
+<app-formulario [textoDoBotao]="textoDoBotao" ></app-formulario>
+
+[textoDoBotao]="textoDoBotao"
+
 <div class="formul">
 <form > 
-    id: <input #uid type="text" class="id" ngModel="USUNOVO.id"><br><br>
-    Nome: <input #unome type="text" class="nome" ngModel="USUNOVO.nome"><br><br>
-    Registro: <input #uregistro type="text" class="registro" ngModel="USUNOVO.registro"><br><br>
-    Setor    : <input  #usetor type="text" class="setor" ngModel="USUNOVO.setor"><br><br>
-    Cargo: <input #ucargo type="text" class="cargo" ngModel="USUNOVO.cargo" ><br><br>
+    id: <input #id type="text" class="id" ngModel="idUsuario"><br><br>
+    Nome: <input #nome type="text" class="nome" ngModel="nome.nome"><br><br>
+    Registro: <input #registro type="text" class="registro" ngModel="usuarios.registro"><br><br>
+    Setor    : <input  #setor type="text" class="setor" ngModel="usetor.setor"><br><br>
+    Cargo: <input #cargo type="text" class="cargo" ngModel="ucargo" ><br><br>
 </form>
- <input class="inp" type="button"  value="NOVO"  (click)= " adicionarusuario (uid.value,unome.value,uregistro.value,usetor.value,ucargo.value)"/>
+ <input class="inp" type="button"  value="NOVO"  (click)= " adicionarusuario (id.value,nome.value,registro.value,setor.value,cargo.value)"/>
  </div>
     <p>---------------------------------------------------------------------------------------------------------------------------------------</p>
     <div>{{  Usuarios.length }}</div>

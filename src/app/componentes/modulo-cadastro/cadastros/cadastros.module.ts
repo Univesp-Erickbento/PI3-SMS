@@ -6,16 +6,18 @@ import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input'
 import { CadastroUsuarioService } from '../../serviços';
+import { FormularioComponent } from '../../formulario/formulario.component';
 
 @NgModule({
   declarations: [
     UsuarioComponent,
+    FormularioComponent
+  
   ],
   
   imports: [
     CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
+  
     MatTableModule,
     MatButtonModule,
     MatInputModule,

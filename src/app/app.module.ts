@@ -8,6 +8,10 @@ import { SensoresComponent } from './componentes/cadastros/sensores/sensores.com
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CadastrosModule } from './componentes/modulo-cadastro';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,12 +19,17 @@ import { CadastrosModule } from './componentes/modulo-cadastro';
     LoginComponent,
     SensoresComponent,
    
+    
+   
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
-    CadastrosModule
+    CadastrosModule,
+    FormsModule,
+    ReactiveFormsModule,
+   
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { CadastroUsuarioService, } from '../../serviços/cadastro-usuario.service';
 import { Usuario} from './usuarioClass';
+import { FormularioComponent } from '../../formulario/formulario.component'; 
 import { FormControl,Form,FormsModule,FormGroup, Validators } from '@angular/forms';
 @Component({
   selector: 'app-usuario',
@@ -8,7 +9,7 @@ import { FormControl,Form,FormsModule,FormGroup, Validators } from '@angular/for
   styleUrls: ['./usuario.component.scss']
 })
 export class UsuarioComponent implements OnInit {
-
+  textoDoBotao="Cadastrar"
   Usuarios: Array<Usuario> = []
  
   constructor(private cadastrarUsuarioService: CadastroUsuarioService) { }
@@ -29,6 +30,7 @@ export class UsuarioComponent implements OnInit {
       let returnCadastro = this.cadastrarUsuarioService.cadastrarUsuario(ObjectCadastro)
 
       this.Usuarios.push(returnCadastro)
+      console.log(this.Usuarios)
   }
 
 }
