@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CadastroUsuarioService, } from '../../serviços/cadastro-usuario.service';
 import { Usuario} from './usuarioClass';
 import { FormularioComponent } from '../../formulario/formulario.component'; 
@@ -11,12 +11,16 @@ import { FormControl,Form,FormsModule,FormGroup, Validators } from '@angular/for
 export class UsuarioComponent implements OnInit {
   textoDoBotao="Cadastrar"
   Usuarios: Array<Usuario> = []
+  
  
   constructor(private cadastrarUsuarioService: CadastroUsuarioService) { }
 
   ngOnInit(): void {
   }
 
+  public usuarioNovo($event: any): void{
+    
+  }
   adicionarusuario(idUsuario: string, nome: string,registro: string, setor: string,cargo: string) {
 
       let ObjectCadastro: Usuario = {
@@ -31,6 +35,7 @@ export class UsuarioComponent implements OnInit {
 
       this.Usuarios.push(returnCadastro)
       console.log(this.Usuarios)
+     
   }
 
 }

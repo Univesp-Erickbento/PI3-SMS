@@ -1,5 +1,8 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormGroup,ReactiveFormsModule, Validators } from '@angular/forms';
+
+import { Usuario } from '../cadastros/usuario/usuarioClass';
+import { CadastroUsuarioService, } from '../serviços/cadastro-usuario.service';
 
 @Component({
   selector: 'app-formulario',
@@ -8,12 +11,14 @@ import { FormGroup,ReactiveFormsModule, Validators } from '@angular/forms';
 })
 export class FormularioComponent implements OnInit {
 @Input() textoDoBotao!: string;
-
+@Output() usuarioNovo = new EventEmitter<string>();
 formsCadastroUSuario!: FormGroup
+ Usuarios: Array<Usuario> = []
 
-
-  constructor() { }
-
+  constructor(private cadastrarUsuarioService: CadastroUsuarioService) { }
+public textDoBotao(): void {
+    this.usuarioNovo.emit("ErickBento")
+}
   ngOnInit(): void {
     this.formsCadastroUSuario = new FormGroup({
       id: new FormGroup('',[Validators.required]),
@@ -34,4 +39,20 @@ get id(){
     console.log("Enviando Formulario");
   }
 
+  adicionarusuario(idUsuario: string, nome: string,registro: string, setor: string,cargo: string) {
+
+    let ObjectCadastro: Usuario = {
+      idUsuario : idUsuario,
+      nome : nome,
+      registro : registro,
+      setor : setor,
+      cargo : cargo
+    }
+
+    let returnCadastro = this.cadastrarUsuarioService.cadastrarUsuario(ObjectCadastro)
+
+    this.Usuarios.push(returnCadastro)
+    console.log(this.Usuarios)
+
+  }
 }
