@@ -11,13 +11,13 @@ import { CadastroUsuarioService, } from '../serviços/cadastro-usuario.service';
 })
 export class FormularioComponent implements OnInit {
 @Input() textoDoBotao!: string;
-@Output() usuarioNovo = new EventEmitter<string>();
+@Output() aoAdicionarusuario = new EventEmitter<any>();
 formsCadastroUSuario!: FormGroup
  Usuarios: Array<Usuario> = []
 
   constructor(private cadastrarUsuarioService: CadastroUsuarioService) { }
-public textDoBotao(): void {
-    this.usuarioNovo.emit("ErickBento")
+    public textDoBotao(): void {
+   
 }
   ngOnInit(): void {
     this.formsCadastroUSuario = new FormGroup({
@@ -31,28 +31,13 @@ public textDoBotao(): void {
 get id(){
   return this.formsCadastroUSuario.get('id')!;
 }
+submit(){
 
-  submit(){
     if (this.formsCadastroUSuario.invalid) {
       return;
     }
-    console.log("Enviando Formulario");
-  }
-
-  adicionarusuario(idUsuario: string, nome: string,registro: string, setor: string,cargo: string) {
-
-    let ObjectCadastro: Usuario = {
-      idUsuario : idUsuario,
-      nome : nome,
-      registro : registro,
-      setor : setor,
-      cargo : cargo
-    }
-
-    let returnCadastro = this.cadastrarUsuarioService.cadastrarUsuario(ObjectCadastro)
-
-    this.Usuarios.push(returnCadastro)
+    console.log("Enviando Formulario");  
     console.log(this.Usuarios)
-
+    this.aoAdicionarusuario.emit(this.Usuarios)
   }
 }

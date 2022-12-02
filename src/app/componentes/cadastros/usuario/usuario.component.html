@@ -4,16 +4,19 @@
 
 <div class="formul">
 <form > 
-    id: <input #id type="text" class="id" ngModel="idUsuario"><br><br>
+    id: <input #idUsuario type="text" class="id" (ngModel)="idUsuario"><br><br>
     Nome: <input #nome type="text" class="nome" ngModel="nome.nome"><br><br>
     Registro: <input #registro type="text" class="registro" ngModel="usuarios.registro"><br><br>
-    Setor    : <input  #setor type="text" class="setor" ngModel="usetor.setor"><br><br>
-    Cargo: <input #cargo type="text" class="cargo" ngModel="ucargo" ><br><br>
+    Setor    : <input  #setor type="text" class="setor" ngModel="setor.setor"><br><br>
+    Cargo: <input #cargo type="text" class="cargo" ngModel="Usuarios.cargo" ><br><br>
 </form>
- <input class="inp" type="button"  value="NOVO"  (click)= " adicionarusuario (id.value,nome.value,registro.value,setor.value,cargo.value)"/>
+ <input class="inp" type="button"  value="NOVO"  (click)= " adicionarusuario (idUsuario.value,nome.value,registro.value,setor.value,cargo.value)">
  </div>
     <p>---------------------------------------------------------------------------------------------------------------------------------------</p>
-    <div>{{  Usuarios.length }}</div>
+    <div>{{  Usuarios}}</div> 
+      this.aoAdicionarusuario.emit(returnCadastro)
+      this.aoAdicionarusuario.emit(returnCadastro)
+      <div>{{c.length}}</div> 
 
     <p>***************************************************************************************************************************************</p>
 
@@ -41,4 +44,3 @@
               </tbody>
           </table>
       </div>
-

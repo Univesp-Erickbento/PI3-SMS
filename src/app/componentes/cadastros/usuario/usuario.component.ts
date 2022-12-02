@@ -11,8 +11,9 @@ import { FormControl,Form,FormsModule,FormGroup, Validators } from '@angular/for
 export class UsuarioComponent implements OnInit {
   textoDoBotao="Cadastrar"
   Usuarios: Array<Usuario> = []
-  
- 
+  @Output()aoAdicionarusuario = new EventEmitter <any>();
+
+ public c :Array<Usuario> = []
   constructor(private cadastrarUsuarioService: CadastroUsuarioService) { }
 
   ngOnInit(): void {
@@ -21,7 +22,7 @@ export class UsuarioComponent implements OnInit {
   public usuarioNovo($event: any): void{
     
   }
-  adicionarusuario(idUsuario: string, nome: string,registro: string, setor: string,cargo: string) {
+  adicionarusuario(idUsuario: string, nome: string,registro: string, setor: string,cargo: string): any {
 
       let ObjectCadastro: Usuario = {
         idUsuario : idUsuario,
@@ -35,6 +36,9 @@ export class UsuarioComponent implements OnInit {
 
       this.Usuarios.push(returnCadastro)
       console.log(this.Usuarios)
+      return (this.Usuarios)
+      this.c=returnCadastro
+      this.aoAdicionarusuario.emit(returnCadastro)
      
   }
 
