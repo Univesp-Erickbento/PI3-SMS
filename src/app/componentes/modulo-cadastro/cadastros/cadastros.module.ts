@@ -12,16 +12,18 @@ import { FormularioComponent } from '../../formulario/formulario.component';
   declarations: [
     UsuarioComponent,
     FormularioComponent
-  
+
   ],
-  
+
   imports: [
     CommonModule,
-  
     MatTableModule,
     MatButtonModule,
     MatInputModule,
-    
+    FormsModule,
+    ReactiveFormsModule,
+
+
   ],
 
   exports: [

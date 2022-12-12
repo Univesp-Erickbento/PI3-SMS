@@ -1,46 +1,81 @@
 
-<form (ngSubmit)="submit" formGroup="formsCadastroUSuario" formDir="ngForm" > 
-    <div class="form-group">
-    <label for="title"></label>
-        id do Usuário: <input  
-         type="text" 
-         class="id" 
-         placeholder="Gerado pelo Sistema" 
-         formControlName="id"
-         required
-         ><br><br> 
+<section class="container">
+  <form  (ngSubmit)="adicionarusuario(idUsuario.value,nome.value,registro.value,setor.value,cargo.value)" >
+          <div class="form-group">
+             <label for="idUsuario"></label>
+              id do Usuário: <input #idUsuario
+              type="text"
+              class="id"
+              id = "idUsuario"
+              placeholder="Gerado pelo Sistema"
 
-           <div *ngif="title.invalid && formDir.submitted" class ="validation-error">
-            <p *ngIf= "id.errors?.['required']"> o ID do Usuário é obrigatório </p>
-         </div>
-     </div>
+              required
+              [(ngModel)]="idUsuario.value"
+              name="idUsuario"><br><br>
 
-     <div class="form-group">
-        <label for="title"></label>
-        Nome do Usuário: <input  #nome
-        type="text" 
-        class="nome" 
-        placeholder="Nome do Usuario" 
-        formControlName="nome"
-        ngModel="usuarios.nome"><br><br>
-    </div>
-    <div class="form-group">
-        <label for="title"></label>
-    Registro do Usuário: <input #uregistro 
-    type="text" 
-    class="registro" 
-    placeholder="Registro do Usuario"
-    ngModel="USUNOVO.registro"><br><br>
-    </div>
-    <div class="form-group">
-        <label for="title"></label>
-    Setor do Usuário: <input  #usetor type="text" class="setor" placeholder="Setor de trabalho"ngModel="USUNOVO.setor"><br><br>
-    </div>
-    <div class="form-group">
-        <label for="title"></label>
-    Cargo do Usuário: <input #ucargo type="text" class="cargo" placeholder="Cargo do Usuario"ngModel="USUNOVO.cargo" ><br><br>
-    </div>
 
- <input class="inp" type="Submit"  value="{{textoDoBotao}}"  />
-</form>
+          </div>
+
+          <div class="form-group">
+              <label for="nomeUsuario"></label>
+              Nome do Usuário: <input  #nome
+              type="text"
+              class="nome"
+              id = "nomeUsuario"
+              placeholder="Nome do Usuario"
+
+              [(ngModel)]="nome.value"
+              name="nome"><br><br>
+          </div>
+
+          <div class="form-group">
+              <label for="registroUsuario"></label>
+                Registro do Usuário: <input #registro
+                type="text"
+                class="registro"
+                id = "registroUsuario"
+                placeholder="Registro do Usuario"
+
+                [(ngModel)]="registro.value"
+                name="registro"><br><br>
+          </div>
+
+          <div class="form-group">
+              <label for="setorUsuario"></label>
+              Setor do Usuário: <input  #setor
+              type="text"
+              class="setor"
+              id = "setorUsuario"
+              placeholder="Setor de trabalho"
+
+              [(ngModel)]="setor.value"
+              name="setor"><br><br>
+          </div>
+
+          <div class="form-group">
+              <label for="cargoUsuario"></label>
+              Cargo do Usuário: <input #cargo
+              type="text"
+              class="cargo"
+              id = "cargoUsuario"
+              placeholder="Cargo do Usuario"
+
+              [(ngModel)]="cargo.value"
+              name="cargo" ><br><br>
+          </div>
+
+          <div class="botao-wrapper">
+
+                <button
+                  class="botao"
+                  type="submit">
+                  {{textoDoBotao}}
+                </button>
+          </div>
+
+  </form>
+
+ </section>
+
+
     <p>---------------------------------------------------------------- </p>

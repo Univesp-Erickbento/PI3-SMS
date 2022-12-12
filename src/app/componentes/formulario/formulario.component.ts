@@ -1,5 +1,5 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { FormGroup,ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormGroup, ReactiveFormsModule, Validators, FormControl } from '@angular/forms';
 
 import { Usuario } from '../cadastros/usuario/usuarioClass';
 import { CadastroUsuarioService, } from '../serviços/cadastro-usuario.service';
@@ -11,33 +11,51 @@ import { CadastroUsuarioService, } from '../serviços/cadastro-usuario.service';
 })
 export class FormularioComponent implements OnInit {
 @Input() textoDoBotao!: string;
-@Output() aoAdicionarusuario = new EventEmitter<any>();
-formsCadastroUSuario!: FormGroup
- Usuarios: Array<Usuario> = []
 
+formsCadastroUSuario!: FormGroup
+  Usuarios: any[] = []
+  @Output()aoAdicionarusuario = new EventEmitter <any>();
   constructor(private cadastrarUsuarioService: CadastroUsuarioService) { }
-    public textDoBotao(): void {
-   
-}
+
   ngOnInit(): void {
     this.formsCadastroUSuario = new FormGroup({
-      id: new FormGroup('',[Validators.required]),
-      nome: new FormGroup(''),
-      registro: new FormGroup(''),
-      setor: new FormGroup(''),
-      cargo: new FormGroup(''),
+      idUsuario: new FormControl('',[Validators.required]),
+      nome: new FormControl(''),
+      registro: new FormControl(''),
+      setor: new FormControl(''),
+      cargo: new FormControl(''),
     });
   }
-get id(){
-  return this.formsCadastroUSuario.get('id')!;
-}
-submit(){
 
-    if (this.formsCadastroUSuario.invalid) {
-      return;
-    }
-    console.log("Enviando Formulario");  
-    console.log(this.Usuarios)
-    this.aoAdicionarusuario.emit(this.Usuarios)
-  }
+
+
+
+get idUsuario (){
+  return this.formsCadastroUSuario.get('idUsuario')!;
 }
+  adicionarusuario(idUsuario: string, nome: string,registro: string, setor: string,cargo: string){
+
+  let ObjectCadastro: Usuario = {
+    idUsuario : idUsuario,
+    nome : nome,
+    registro : registro,
+    setor : setor,
+    cargo : cargo
+  }
+
+  let returnCadastro = this.cadastrarUsuarioService.cadastrarUsuario(ObjectCadastro)
+
+  this.Usuarios.push(returnCadastro)
+
+  this.aoAdicionarusuario.emit(returnCadastro)
+
+  //console.log("Enviando Formulario");
+  //console.log(this.Usuarios);
+// console.log(this.Usuarios.length)
+
+
+
+  }
+
+
+ }
