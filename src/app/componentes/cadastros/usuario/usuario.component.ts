@@ -9,7 +9,7 @@ import { FormControl,Form,FormsModule,FormGroup, Validators } from '@angular/for
 })
 export class UsuarioComponent implements OnInit {
 
-  Usuarios: any=[]
+  Usuarios: any=[];
 
   constructor(private cadastrarUsuarioService: CadastroUsuarioService) { }
 
@@ -29,8 +29,8 @@ export class UsuarioComponent implements OnInit {
       let returnCadastro = this.cadastrarUsuarioService.cadastrarUsuario(ObjectCadastro)
       //console.log(ObjectCadastro)
       //console.log(returnCadastro)
-      this.Usuarios.push(returnCadastro)
+      this.Usuarios.push(returnCadastro )
       console.log(this.Usuarios)
   }
-  
+
 }

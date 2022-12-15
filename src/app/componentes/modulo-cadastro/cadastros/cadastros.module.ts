@@ -1,3 +1,4 @@
+import { UsuarioViewComponent } from './../../cadastros/usuario/usuario-view/usuario-view.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { UsuarioComponent } from '../../cadastros/usuario';
@@ -10,8 +11,9 @@ import { CadastroUsuarioService } from '../../serviços';
 @NgModule({
   declarations: [
     UsuarioComponent,
+    UsuarioViewComponent
   ],
-  
+
   imports: [
     CommonModule,
     FormsModule,
@@ -19,7 +21,7 @@ import { CadastroUsuarioService } from '../../serviços';
     MatTableModule,
     MatButtonModule,
     MatInputModule,
-    
+
   ],
 
   exports: [

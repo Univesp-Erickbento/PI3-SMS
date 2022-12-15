@@ -79,34 +79,10 @@
 
         <p>---------------------------------------------------------------- </p>
         <div>{{  Usuarios}}</div>
-      
+
     <p>---------------------------------------------------------------------------------------------------------------------------------------</p>
     <div>{{  Usuarios.length }}</div>
 
     <p>*******************************************************************************************************************************************************************************************************************************</p>
 
-    <div>
-     <table class="table table-striped table-hover" >
-              <thead>
-                  <tr>
-                    <th>ID</th>
-                    <th>Nome</th>
-                    <th>Registro</th>
-                    <th>Setor</th>
-                    <th>Cargo</th>
-                    <th>Deletar</th>
-                  </tr>
-              </thead>
-              <tbody>
-                <tr *ngFor="let usuarios of Usuarios">
-                    <td>{{usuarios.idUsuario}}</td>
-                    <td>{{usuarios.nome}}</td>
-                    <td>{{usuarios.registro}}</td>
-                    <td> {{usuarios.setor}}</td>
-                    <td>{{usuarios.cargo}}</td>
-                    <td><button class="del" (click)="(usuarios.idUsuario)">Deletar</button></td>
-                </tr>
-              </tbody>
-          </table>
-      </div>
-
+   <app-usuario-view [Usuarios]="Usuarios"></app-usuario-view>

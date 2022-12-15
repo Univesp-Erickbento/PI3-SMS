@@ -7,6 +7,7 @@ import { LoginComponent } from './componentes/pages/login/login.component';
 import { SensoresComponent } from './componentes/cadastros/sensores/sensores.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CadastrosModule } from './componentes/modulo-cadastro';
+import { UsuarioViewComponent } from './componentes/cadastros/usuario/usuario-view/usuario-view.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CadastrosModule } from './componentes/modulo-cadastro';
     HomeComponent,
     LoginComponent,
     SensoresComponent,
-   
+    
+
   ],
   imports: [
     BrowserModule,

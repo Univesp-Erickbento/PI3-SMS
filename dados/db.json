@@ -1,0 +1,17 @@
+{
+  "Usuarios": [
+    { "idUsuario": 1,
+    "nome": "Erick Bento",
+    "registro": "74685",
+    "setor": "Manuseio",
+    "cargo": "Gerente"
+},
+{
+    "idUsuario": 2,
+    "nome": "Isaque Bento",
+    "registro": "556727535",
+    "setor": "Tapeçaria",
+    "cargo": "Supervisor" }
+
+  ]
+}
