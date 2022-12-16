@@ -1,12 +1,84 @@
-<div class="formul" >
-<form > 
-  <div class="mb-3">
-    id: <input #uid type="text" class="form-control form-control-sm"  ngModel="USUNOVO.id"><br><br>
-    Nome do Sensor: <input #unome type="text" class="form-control form-control-sm" ngModel="USUNOVO.nome"><br><br>
-    Endereço IP: <input #uregistro type="text" class="form-control form-control-sm" ngModel="USUNOVO.registro"><br><br>
-    Setor do Sensor   : <input  #usetor type="text" class="form-control form-control-sm" ngModel="USUNOVO.setor"><br><br>
-    Tipo do Sensor: <input #ucargo type="text" class="form-control form-control-sm" ngModel="USUNOVO.cargo" ><br><br>
-    </div>
-</form>
- <input class="btn btn-primary btn-lg" type="button"  value="NOVO"  >
-</div>
+<section class="container">
+  <form (ngSubmit)="adicionarSensor(idSensor.value,nomeSensor.value,IPSensor.value,setorSensor.value,tipoSensor.value)" >
+  <div class="form-group">
+  <label for="idSensor"></label>
+  id do Sensor: <input #idSensor
+  type="text"
+  class="id"
+  id = "idSensor"
+  placeholder="Gerado pelo Sistema"
+
+  required
+  [(ngModel)]="idSensor.value"
+  name="idSensor"><br><br>
+
+  </div>
+
+  <div class="form-group">
+  <label for="nomeSensor"></label>
+  Nome do Sensor: <input #nomeSensor
+  type="text"
+  class="nome"
+  id = "nomeSensor"
+  placeholder="Nome do Sensor"
+
+  [(ngModel)]="nomeSensor.value"
+  name="nomeSensor"><br><br>
+  </div>
+
+  <div class="form-group">
+  <label for="registroUsuario"></label>
+  IP do Sensor <input #IPSensor
+  type="text"
+  class="IP"
+  id = "IPSensor"
+  placeholder="IP do Sensor"
+
+  [(ngModel)]="IPSensor.value"
+  name="IPSensor><br><br>
+  </div>
+
+  <div class="form-group">
+  <label for="setorSensor"></label>
+  Setor do Sensor: <input #setorSensor
+  type="text"
+  class="setorSensor"
+  id = "setorSensor"
+  placeholder="Setor do Sensor"
+
+  [(ngModel)]="setorSensor.value"
+  name="setorSensor"><br><br>
+  </div>
+
+  <div class="form-group">
+  <label for="tipo do Sensor"></label>
+  Tipo do Sensor: <input #tipoSensor
+  type="text"
+  class="tipoSensor"
+  id = "tipoSensor"
+  placeholder="Cargo do Usuario"
+
+  [(ngModel)]="tipoSensor.value"
+  name="tipoSensor" ><br><br>
+  </div>
+
+  <div class="botao-wrapper">
+
+  <button
+  class="botao"
+  type="submit">
+  Cadastrar novo Sensor
+  </button>
+  </div>
+
+  </form>
+
+  </section>
+
+  <p>---------------------------------------------------------------- </p>
+  <div>{{ Usuarios}}</div>
+
+  <p>---------------------------------------------------------------------------------------------------------------------------------------</p>
+  <div>{{ Usuarios.length }}</div>
+
+  <p>*******************************************************************************************************************************************************************************************************************************</p>
