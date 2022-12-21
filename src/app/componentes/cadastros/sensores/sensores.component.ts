@@ -1,5 +1,7 @@
 import { CadastroSensorService } from './../../serviços/sensores/cadastro-sensor.service';
 import { Component, OnInit } from '@angular/core';
+import { Sensor } from '../../serviços/sensores/sensor-class';
+import { FormControl,Form,FormsModule,FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-sensores',
@@ -17,7 +19,7 @@ export class SensoresComponent implements OnInit {
 
    adicionarSensor(idSensor: string,nomeSensor: string,IPSensor: string,setorSensor: string,tipoSensor: string){
 
-  let ObjectCadastro: any = {
+  let ObjectCadastro: Sensor = {
   idSensor : idSensor,
   nomeSensor : nomeSensor,
   IPSensor : IPSensor,
@@ -25,11 +27,12 @@ export class SensoresComponent implements OnInit {
   tipoSensor: tipoSensor
   }
 
-  let returnCadastro = this.CadastroSensorService .cadastrarSensor(ObjectCadastro)
+  let returnCadastro = this.CadastroSensorService.cadastrarSensor(ObjectCadastro)
   //console.log(ObjectCadastro)
-  //console.log(returnCadastro)
+ // console.log(returnCadastro)
   this.sensores.push(returnCadastro )
   console.log(this.sensores)
+
   }
 
   }

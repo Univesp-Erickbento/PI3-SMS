@@ -4,12 +4,12 @@ import { Sensor } from './sensor-class';
   providedIn: 'root'
 })
 export class CadastroSensorService {
-novoSensor! :Sensor
+NOVOSENSOR! :Sensor
   constructor() {}
 
     cadastrarSensor(novoSensor : Sensor) : any {
 
-localStorage.setItem(novoSensor.idSensor,this.novoSensor.toString())
-return this.novoSensor
+//localStorage.setItem(novoSensor.idSensor,this.novoSensor.toString())
+return novoSensor
  }
 }

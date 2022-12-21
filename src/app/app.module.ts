@@ -14,8 +14,8 @@ import { UsuarioViewComponent } from './componentes/cadastros/usuario/usuario-vi
     AppComponent,
     HomeComponent,
     LoginComponent,
-    SensoresComponent,
     
+
 
   ],
   imports: [

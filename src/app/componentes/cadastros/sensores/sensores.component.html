@@ -10,7 +10,8 @@
 
   required
   [(ngModel)]="idSensor.value"
-  name="idSensor"><br><br>
+  name="idSensor"
+  ><br><br>
 
   </div>
 
@@ -23,19 +24,22 @@
   placeholder="Nome do Sensor"
 
   [(ngModel)]="nomeSensor.value"
-  name="nomeSensor"><br><br>
+  name="nomeSensor"
+  ><br><br>
+
   </div>
 
   <div class="form-group">
   <label for="registroUsuario"></label>
-  IP do Sensor <input #IPSensor
+  IP do Sensor :<input #IPSensor
   type="text"
   class="IP"
   id = "IPSensor"
   placeholder="IP do Sensor"
 
   [(ngModel)]="IPSensor.value"
-  name="IPSensor><br><br>
+  name="IPSensor"
+  ><br><br>
   </div>
 
   <div class="form-group">
@@ -47,7 +51,8 @@
   placeholder="Setor do Sensor"
 
   [(ngModel)]="setorSensor.value"
-  name="setorSensor"><br><br>
+  name="setorSensor"
+    ><br><br>
   </div>
 
   <div class="form-group">
@@ -57,9 +62,9 @@
   class="tipoSensor"
   id = "tipoSensor"
   placeholder="Cargo do Usuario"
-
   [(ngModel)]="tipoSensor.value"
-  name="tipoSensor" ><br><br>
+  name="tipoSensor"
+  ><br><br>
   </div>
 
   <div class="botao-wrapper">
@@ -76,9 +81,9 @@
   </section>
 
   <p>---------------------------------------------------------------- </p>
-  <div>{{ Usuarios}}</div>
+  <div>{{ sensores}}</div>
 
   <p>---------------------------------------------------------------------------------------------------------------------------------------</p>
-  <div>{{ Usuarios.length }}</div>
+  <div>{{ sensores.length }}</div>
 
   <p>*******************************************************************************************************************************************************************************************************************************</p>

@@ -1,3 +1,5 @@
+import { CadastroSensorService } from './../../serviços/sensores/cadastro-sensor.service';
+import { SensoresComponent } from './../../cadastros/sensores/sensores.component';
 import { UsuarioViewComponent } from './../../cadastros/usuario/usuario-view/usuario-view.component';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -11,7 +13,8 @@ import { CadastroUsuarioService } from '../../serviços';
 @NgModule({
   declarations: [
     UsuarioComponent,
-    UsuarioViewComponent
+    UsuarioViewComponent,
+    SensoresComponent
   ],
 
   imports: [
@@ -26,10 +29,12 @@ import { CadastroUsuarioService } from '../../serviços';
 
   exports: [
     UsuarioComponent,
+    SensoresComponent
   ],
 
   providers:[
-    CadastroUsuarioService
+    CadastroUsuarioService,
+    CadastroSensorService
   ]
 })
 export class CadastrosModule { }
