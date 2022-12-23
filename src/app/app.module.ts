@@ -8,6 +8,7 @@ import { SensoresComponent } from './componentes/cadastros/sensores/sensores.com
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CadastrosModule } from './componentes/modulo-cadastro';
 import { UsuarioViewComponent } from './componentes/cadastros/usuario/usuario-view/usuario-view.component';
+import { SensoresViewComponent } from './componentes/cadastros/sensores/sensores-view/sensores-view.component';
 
 @NgModule({
   declarations: [
@@ -15,8 +16,6 @@ import { UsuarioViewComponent } from './componentes/cadastros/usuario/usuario-vi
     HomeComponent,
     LoginComponent,
     
-
-
   ],
   imports: [
     BrowserModule,

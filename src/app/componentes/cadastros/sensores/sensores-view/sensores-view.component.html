@@ -1,0 +1,28 @@
+
+<div>
+  <table class="table table-striped table-hover" >
+           <thead>
+               <tr>
+                 <th>id do Sensor</th>
+                 <th>nome do Sensor</th>
+                 <th>IP do Sensor</th>
+                 <th>setor do Sensor</th>
+                 <th>tipo do Sensor</th>
+                 <th>Deletar</th>
+               </tr>
+           </thead>
+           <tbody *ngIf="Sensor.length > 0 ; else listaSensorVazio">
+             <tr *ngFor="let sensores of Sensor">
+                 <td>{{sensores.idSensor}}</td>
+                 <td>{{sensores.nomeSensor}}</td>
+                 <td>{{sensores.IPSensor}}</td>
+                 <td> {{sensores.setorSensor}}</td>
+                 <td>{{sensores.tipoSensor}}</td>
+                 <td><button class="del" (click)="(sensores.idSensor)">Deletar</button></td>
+             </tr>
+           </tbody>
+       </table>
+       <ng-template #listaSensorVazio>
+        <p>Nenhum Sensor cadastrado </p>
+       </ng-template>
+   </div>

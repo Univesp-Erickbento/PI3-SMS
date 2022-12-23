@@ -1,3 +1,4 @@
+import { SensoresViewComponent } from './../../cadastros/sensores/sensores-view/sensores-view.component';
 import { CadastroSensorService } from './../../serviços/sensores/cadastro-sensor.service';
 import { SensoresComponent } from './../../cadastros/sensores/sensores.component';
 import { UsuarioViewComponent } from './../../cadastros/usuario/usuario-view/usuario-view.component';
@@ -14,7 +15,8 @@ import { CadastroUsuarioService } from '../../serviços';
   declarations: [
     UsuarioComponent,
     UsuarioViewComponent,
-    SensoresComponent
+    SensoresComponent,
+    SensoresViewComponent
   ],
 
   imports: [
