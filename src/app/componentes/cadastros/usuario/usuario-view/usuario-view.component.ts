@@ -1,3 +1,4 @@
+import { Usuario } from './../usuarioClass';
 import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
@@ -8,6 +9,8 @@ import { Component, Input, OnInit } from '@angular/core';
 export class UsuarioViewComponent implements OnInit {
 
   @Input() Usuarios: any;
+
+
   constructor() { }
 
   ngOnInit(): void {

@@ -1,5 +1,5 @@
 <section class="container">
-      <form  (ngSubmit)="adicionarusuario(idUsuario.value,nome.value,registro.value,setor.value,cargo.value)" >
+      <form  (ngSubmit)="adicionarusuario(idUsuario.value,nome.value,registro.value,setor.value,cargo.value,data.value)" >
               <div class="form-group">
                  <label for="idUsuario"></label>
                   id do Usuário: <input #idUsuario
@@ -63,6 +63,18 @@
                   name="cargo" ><br><br>
               </div>
 
+              <div class="form-group">
+                  <label for="dataUsuario"></label>
+                  Cargo do Usuário: <input #data
+                  type="text"
+                  class="data"
+                  id = "dataUsuario"
+                  placeholder="data do cadastro"
+
+                  [(ngModel)]="data.value"
+                  name="data" ><br><br>
+              </div>
+
               <div class="botao-wrapper">
 
                     <button
@@ -78,7 +90,9 @@
 
 
         <p>---------------------------------------------------------------- </p>
-        <div>{{  Usuarios}}</div>
+        <div>
+          ()
+          {{  Usuarios}}</div>
 
     <p>---------------------------------------------------------------------------------------------------------------------------------------</p>
     <div>{{  Usuarios.length }}</div>

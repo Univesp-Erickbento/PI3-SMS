@@ -3,6 +3,7 @@ export interface Usuario {
         nome: string;
         registro: string;
         setor: string;
-        cargo: string
+        cargo: string;
+        data?:string
 }
 

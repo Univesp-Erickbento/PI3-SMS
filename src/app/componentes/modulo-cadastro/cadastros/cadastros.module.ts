@@ -10,6 +10,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatButtonModule } from '@angular/material/button';
 import { MatInputModule } from '@angular/material/input'
 import { CadastroUsuarioService } from '../../serviços';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,7 @@ import { CadastroUsuarioService } from '../../serviços';
     MatTableModule,
     MatButtonModule,
     MatInputModule,
-
+    HttpClientModule
   ],
 
   exports: [
